@@ -1,14 +1,54 @@
-# Site settings
-title: Robert Glastra
-email: robert.glastra@gmail.com
-description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://robertglastra.eu" # the base hostname & protocol for your site
-twitter_username: robglas
-github_username:  robglas
+# Site wide configuration
 
-# Build settings
-markdown: kramdown
+title: Robert Glastra
+locale: en_US
+description: A web engineer tinkering with stuff.
+logo: site-logo.png
+search: true
+url: http://robertglastra.com
+
+# Jekyll configuration
+
+permalink:   /:categories/:title/
+markdown:    kramdown
+highlighter: pygments
+sass:
+  sass_dir: _sass
+  style: compressed
+gems:
+  - jekyll-sitemap
+
+kramdown:
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..2
+  use_coderay: false
+
+include: [".htaccess"]
+exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules", "Gemfile", "Gemfile.lock", "LICENSE", "README.md", "vendor"]
+
+
+# Site owner
+owner:
+  name: Robert Glastra
+  avatar: bio-photo.jpg
+  email: robert.glastra@gmail.com
+  disqus-shortname: rglastra
+  twitter: robglas
+  facebook: robert.glastra
+  github: #robglas
+  stackexchange: #http://stackoverflow.com/users/123456/username
+  linkedin: #username
+  instagram: #username
+  flickr: #username
+  tumblr: #username
+  pinterest: #username
+  weibo: #userid
+  google:
+    plus: robert.glastra
+    analytics:
+    verify:
+    ad-client:
+    ad-slot:
+  bing-verify:
